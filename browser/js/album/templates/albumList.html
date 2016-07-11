@@ -1,0 +1,16 @@
+<div>
+  <h3>Albums</h3>
+  <div class="row">
+    <div class="col-xs-4" ng-repeat="album in albumView"> //Will need to
+      <a class="thumbnail" ui-sref="album({albumId: album.id})">
+        <img ng-src="{{ album.imageUrl }}">
+        <div class="caption">
+          <h5>
+            <span>{{ albumView.name }}</span>
+          </h5>
+          <small>{{ albumView.songs.length }} songs</small>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
