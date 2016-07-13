@@ -23,6 +23,7 @@ juke.controller('ArtistCtrl', function ($scope, PlayerFactory, theArtist) {
   };
 
   $scope.toggle = function (song) {
+  console.log("toggling!")
     if (song !== PlayerFactory.getCurrentSong()) {
       PlayerFactory.start(song, $scope.artist.songs);
     } else if ( PlayerFactory.isPlaying() ) {
